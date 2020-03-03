@@ -14,8 +14,8 @@
         <Label Content="ISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,120,0,0"/>
         <TextBox x:Name="txtISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,120,0,0" Width="200" Height="30"/>
         <Label Content="Publication Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,40,0,0"/>
-        <DatePicker x:Name="txtDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,40,0,0" Width="200" Height="30"/>
-        <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,90,0,0" Width="80" Height="30"/>
+        <DatePicker Name="txtDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,40,0,0" Width="200" Height="30"></DatePicker>
+        <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,90,0,0" Width="80" Height="30" Click="Save_Click"/>
         <Button Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,90,0,0" Width="80" Height="30"/>
         <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,125,0,0" Width="80" Height="30"/>
         <Button Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,125,0,0" Width="80" Height="30"/>
