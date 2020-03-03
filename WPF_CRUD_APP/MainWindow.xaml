@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_CRUD_APP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="650">
     <Grid>
-        
+        <Label Content="Title" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,40,0,0"/>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,40,0,0" Width="200" Height="30"/>
+        <Label Content="Author" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,80,0,0"/>
+        <TextBox x:Name="txtAuthor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,80,0,0" Width="200" Height="30"/>
+        <Label Content="ISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,120,0,0"/>
+        <TextBox x:Name="txtISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,120,0,0" Width="200" Height="30"/>
+        <Label Content="Publication Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,40,0,0"/>
+        <DatePicker x:Name="txtDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,40,0,0" Width="200" Height="30"/>
+        <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,90,0,0" Width="80" Height="30"/>
+        <Button Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,90,0,0" Width="80" Height="30"/>
+        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,125,0,0" Width="80" Height="30"/>
+        <Button Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,125,0,0" Width="80" Height="30"/>
+        <DataGrid x:Name="MyBooksGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,170,0,0" Width="600" Height="230"/>
     </Grid>
 </Window>
