@@ -89,5 +89,10 @@ namespace WPF_CRUD_APP
             db.SaveChanges();
             datagrid();
         }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            clearFields();
+        }
     }
 }
