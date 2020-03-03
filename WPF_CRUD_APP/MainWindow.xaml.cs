@@ -23,10 +23,13 @@ namespace WPF_CRUD_APP
         //creating a DB object
         public BookDBEntities db = new BookDBEntities();
         public static DataGrid data;
+
+        
         public MainWindow()
         {
             InitializeComponent();
             datagrid();
+
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -58,6 +61,28 @@ namespace WPF_CRUD_APP
             txtAuthor.Clear();
             txtISBN.Clear();
             txtDate.Text = "";
+        }
+
+       
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            //in order to update the book, first need to retrieve the ID of the selected Book
+            int Id = (MyBooksGrid.SelectedItem as Book).ID;
+            var updateBook = db.Books.Where(b => b.ID == Id).Single();
+
+            updateBook.Title = txtTitle.Text;
+            updateBook.Author = txtAuthor.Text;
+            updateBook.ISBN = txtISBN.Text;
+            updateBook.Publication_Date = (DateTime)txtDate.SelectedDate;
+            db.SaveChanges();
+            datagrid();
+
+            clearFields();
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

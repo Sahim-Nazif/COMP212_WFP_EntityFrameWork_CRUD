@@ -16,8 +16,8 @@
         <Label Content="Publication Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,40,0,0"/>
         <DatePicker Name="txtDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,40,0,0" Width="200" Height="30"></DatePicker>
         <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,90,0,0" Width="80" Height="30" Click="Save_Click"/>
-        <Button Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,90,0,0" Width="80" Height="30"/>
-        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,125,0,0" Width="80" Height="30"/>
+        <Button Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,90,0,0" Width="80" Height="30" Click="Edit_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,125,0,0" Width="80" Height="30" Click="Delete_Click"/>
         <Button Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,125,0,0" Width="80" Height="30"/>
         <DataGrid x:Name="MyBooksGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,170,0,0" Width="600" Height="230"/>
     </Grid>
