@@ -82,7 +82,12 @@ namespace WPF_CRUD_APP
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
+            int Id = (MyBooksGrid.SelectedItem as Book).ID;
+            var deleteBook = db.Books.Where(b => b.ID == Id).Single();
 
+            db.Books.Remove(deleteBook);
+            db.SaveChanges();
+            datagrid();
         }
     }
 }
