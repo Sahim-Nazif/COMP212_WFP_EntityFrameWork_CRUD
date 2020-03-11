@@ -63,9 +63,11 @@ namespace WPF_CRUD_APP
             txtDate.Text = "";
         }
 
-       
+
+      
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
+            
             //in order to update the book, first need to retrieve the ID of the selected Book
             int Id = (MyBooksGrid.SelectedItem as Book).ID;
             var updateBook = db.Books.Where(b => b.ID == Id).Single();
@@ -93,6 +95,24 @@ namespace WPF_CRUD_APP
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             clearFields();
+        }
+
+        // added mouse_double click event for the datagrid when item is selected should populate in the text-boxes
+        // to add this event simply select datagrid and then select mousedouble click event in the properties winds to the right
+        private void MyBooksGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+            try
+            {
+                DataGridCellInfo cell1 = MyBooksGrid.SelectedCells[1]; txtTitle.Text = ((TextBlock)cell1.Column.GetCellContent(cell1.Item)).Text.ToString();
+                DataGridCellInfo cell2 = MyBooksGrid.SelectedCells[2]; txtAuthor.Text = ((TextBlock)cell2.Column.GetCellContent(cell2.Item)).Text.ToString();
+                DataGridCellInfo cell4 = MyBooksGrid.SelectedCells[4]; txtISBN.Text = ((TextBlock)cell4.Column.GetCellContent(cell4.Item)).Text.ToString();
+            }
+            catch
+            {
+               
+            }
+
         }
     }
 }

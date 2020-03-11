@@ -19,6 +19,6 @@
         <Button Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,90,0,0" Width="80" Height="30" Click="Edit_Click"/>
         <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,125,0,0" Width="80" Height="30" Click="Delete_Click"/>
         <Button Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="520,125,0,0" Width="80" Height="30" Click="Clear_Click"/>
-        <DataGrid x:Name="MyBooksGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,170,0,0" Width="600" Height="230"/>
+        <DataGrid x:Name="MyBooksGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,170,0,0" Width="600" Height="230" MouseDoubleClick="MyBooksGrid_MouseDoubleClick"/>
     </Grid>
 </Window>
